@@ -1,0 +1,42 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Discussion Prompts</title>
+    <link rel="stylesheet" href="ds_pt.css">
+    <style>
+        .chat-box {
+            border: 1px solid #ccc;
+            padding: 10px;
+            margin-top: 10px;
+            height: 200px; /* Set a fixed height */
+            overflow-y: auto; /* Add scrollbar if content overflows */
+        }
+        .chat-response {
+            background-color: #f0f0f0;
+            padding: 5px;
+            margin-bottom: 5px;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div id="discussion-container">
+        <h1>Discussion Prompts</h1>
+        <div id="prompt">
+            </div>
+        <div id="response-list" class="chat-box">
+            </div>
+        <form id="response-form">
+            <textarea id="response" placeholder="Write your response here..." required></textarea>
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+    <script src="ds_pt.js"></script>
+</body>
+</html>
+
+
+

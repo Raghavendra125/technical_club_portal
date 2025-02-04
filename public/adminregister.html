@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+    <link rel="stylesheet" href="loginstyles.css">
+</head>
+<body>
+    <header>
+        <h1>Technical Club Portal</h1>
+        <img src="images/bitm-logo.png" alt="Organization Logo" class="logo">
+ 
+        
+    </header>
+    <main>
+        <form id="registerForm">
+            <h2>Register a new account for admin</h2>
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" placeholder="Full Name" required>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" placeholder="Email" required>
+            <!--
+            <label for="usn">USN:</label>
+            <input type="text" id="usn" name="usn" placeholder="USN" required>
+             -->
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" placeholder="Password" required>
+            <label for="phone">Phone no:</label>
+            <input type="text" id="phone" name="phone" placeholder="phone" required>
+
+            <button type="submit">Register</button>
+            <p>Already have an account? <a href="login.html">Login</a></p>
+        </form>
+    </main>
+    <script src="adminregister.js"></script>
+</body>
+</html>

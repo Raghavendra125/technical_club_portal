@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Coding Assessment Platform</title>
+  <link rel="stylesheet" href="ast-styles.css">
+</head>
+<body>
+  <header>
+    <h1>Coding Assessment Platform</h1>
+    <!--<button class="back-arrow" onclick="window.history.back()" aria-label="Go back">
+      &#8592; Back
+  </button>-->
+  </header>
+  <main>
+    
+    <section id="question-section">
+      <!--<h2>Problem Statement</h2>-->
+      <div id="question-details">
+        <h3 id="question-title"></h3>
+        <p id="question-text"></p>
+        <p id="difficulty"></p>
+        <ul id="hints"></ul>
+      </div>
+    </section>
+
+    <section id="editor-section">
+      <h2>Code Editor</h2>
+      <div id="editor-container" style="height: 400px;"></div>
+      <label for="language-select">Language:</label>
+      <select id="language-select">
+        <option value="python">Python</option>
+        <option value="javascript">JavaScript</option>
+        <option value="cpp">C++</option>
+        <option value="c">C</option>
+        <option value="java">Java</option>
+        <option value="r">R</option>
+      </select>
+    </section>
+
+    <section id="execution-section">
+      <h2>Test Your Code</h2>
+      <textarea id="custom-input" placeholder="Custom input (optional)" rows="4"></textarea>
+      <button id="run-custom">Run with Custom Input</button>
+      <button id="run-testcases">Run Hidden Test Cases</button>
+      <h3>Output:</h3>
+      <div id="output"></div>
+    </section>
+  </main>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.6/require.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/monaco-editor/0.34.0/min/vs/loader.min.js"></script>
+  <script src="ast-scripts.js"></script>
+</body>
+</html>

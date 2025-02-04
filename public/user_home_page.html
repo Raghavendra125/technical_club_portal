@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Technical Club Portal</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+    <link rel="stylesheet" href="homecss.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Technical Club Portal</h1>
+        </div>
+        <nav class="nav-bar">
+            <ul>
+                <li><a href="#about" >About Us</a></li>
+                <li class="dropdown">
+                    <a href="#events" class="dropbtn">Events</a>
+                    <div class="dropdown-content">
+                        <a href="../postquiz/quizpage.html">Quizzes</a>
+                        <a href="../assessment/ast-index.html">Assessments</a>
+<!--
+                        <a href="#hackathons">Hackathons</a>
+                        <a href="#workshops">Workshops</a>
+                        <a href="#presentations">Presentations</a>-->
+                    </div>
+                </li>
+
+                <li class="dropdown">
+                    <a href="#learn" class="dropbtn">Learn</a>
+                    <div class="dropdown-content">
+                        <a href="../learn/clearn.html">C Programming</a>
+                        <a href="../learn/javalearn.html">Java</a>
+                        <a href="../learn/pythonlearn.html">Python</a>
+
+                    </div>
+                </li>
+                
+                <li><a href="../template/template.html">Templates</a></li>
+                <li><a href="../discussion_pmt/ds_pt.html"> Discussion Prompts</a></li>
+                <li><a href="faqs.html">FAQs</a></li>
+                <li><a href="blog.html">Blogs</a></li>
+                <!---
+                <li><a href="login.html">Sign Out</a></li>-->
+            </ul>
+            <div class="profile-button" onclick="toggleProfileDropdown()">
+                <img src="images/profile_icon.png" alt="Profile">
+                <span>Profile</span>
+            </div>
+        <!--</nav> -->
+        <div class="profile-dropdown" id="profileDropdown">
+            <h3 id="profileName">User Name</h3>
+            <p id="profileEmail">user.email@example.com</p>
+            <button onclick="logout()">Logout</button>
+        </div>
+        </nav>
+    </header>
+    <main>
+        <section id="hero">
+            <div class="container">
+                <h2>Empowering Innovation and Technical Excellence</h2>
+                <p>Join our community of tech enthusiasts, "Technical Club Portal" is to provide a platform where members can collaborate, engage in technical activities, and enhance their skills through events, quizzes, projects, and shared resources. It aims to empower users with tools and opportunities to innovate, learn, and grow in a supportive community..</p>
+            </div>
+            <div class="container">
+                <h2>Technical Club Activities </h2>
+                <p>The technical club webpage offers a comprehensive platform for learning, practicing, and collaboration through its diverse features. Users can test their knowledge with time-limited <strong>Quizzes</strong> across various topics, enhance coding skills with real-time <strong>Coding Assessments</strong> , and design professional <strong>Templates</strong> for events using a drag-and-drop interface. The <strong>Learn</strong> section provides video tutorials on programming languages like Java, C, and Python, along with supplementary resources for self-paced learning. Additionally, the <strong>Discussion Prompts</strong> feature fosters collaboration, enabling users to share insights, solve problems, and engage in meaningful topic-based conversations, making the platform a hub for skill development and community building.</p>
+            </div>
+        </section>
+        
+        <div class="event-grid">
+            <div class="event-card">
+                <img src="images/tech_qz_img.jpg" alt="Technical Quiz Event" class="event-image">
+                <div class="event-content">
+                    <h3>Technical Quizzes</h3>
+                    <p>Test your knowledge and sharpen your skills with our diverse quizzes.  See how you stack up across different topics!.The quiz feature offers a variety of topics categorized into levels such as beginner, intermediate, and advanced. Users can select the difficulty level that best suits their knowledge. Each quiz is time-limited to encourage quick thinking and includes detailed feedback with explanations for correct answers, making it a valuable learning tool.</p>
+                    <a href="../postquiz/quizpage.html" class="btn">Join Next Quiz</a>
+                </div>
+            </div>
+
+            <div class="event-card">
+                <img src="images/tech_cd_img.jpg" alt="Coding Assessment" class="event-image">
+                <div class="event-content">
+                    <h3>Coding Assessments</h3>
+                    <p> The platform allows users to test their coding skills by solving programming questions using a real-time code editor equipped with syntax highlighting, error detection, and support for multiple programming languages. They can run test cases to validate their solutions and receive performance metrics, such as execution time and code efficiency, for self-improvement.</p>
+                    <a href="../assessment/ast-index.html" class="btn">Start Coding</a>
+                </div>
+            </div>
+
+            <div class="event-card">
+                <img src="images/tech_pj_img.jpg" alt="Workshop Session" class="event-image">
+                <div class="event-content">
+                    <h3>Templates</h3>
+                    <p>For events or creative projects, users can design custom templates by incorporating photos, text, and styling.The template creation tool allows users to design event-related templates using a user-friendly drag-and-drop interface.The tool supports adding photos, text, and styling elements, and users can download their creations.</p>
+                    <a href="../template/template.html" class="btn">Create Template</a>
+                </div>
+            </div>
+        </div>
+        <div class="event-grid">
+            <div class="event-card">
+                <img src="images/tech_vd_img.jpg" alt="Technical Quiz Event" class="event-image">
+                <div class="event-content">
+                    <h3>Learning Through videos</h3>
+                    <p>The "Learn" section features a comprehensive library of video tutorials covering programming languages like Java, C, Python, and more. The content ranges from beginner-friendly introductions to advanced techniques and real-world project examples. Users can bookmark videos, track their learning progress</p>
+                    <a href="../learn/clearn.html" class="btn">Learn</a>
+                </div>
+            </div>
+
+            <div class="event-card">
+                <img src="images/tech_events_img.jpg" alt="Coding Assessment" class="event-image">
+                <div class="event-content">
+                    <h3>Discussion Prompts</h3>
+                    <p> The discussion prompts feature fosters a collaborative learning environment by enabling users to participate in topic-based discussions. Users can share insights, and collaborate on solving problems. This is an excellent resource for brainstorming ideas, seeking guidance on technical challenges, and building a sense of community among peers.</p>
+                    <a href="../discussion_pmt/ds_pt.html" class="btn">Discuss</a>
+                </div>
+            </div>
+        </div>
+
+<!--
+
+        <section id="#quizzes" class="container">
+            <h2>Quizzes</h2>
+            <p>Test your knowledge and sharpen your skills with our diverse quizzes.  See how you stack up across different topics!.The quiz feature offers a variety of topics categorized into levels such as beginner, intermediate, and advanced. Users can select the difficulty level that best suits their knowledge. Each quiz is time-limited to encourage quick thinking and includes detailed feedback with explanations for correct answers, making it a valuable learning tool.</p>
+        </section>
+        <section id="assessment" class="container">
+            <h2>Coding Assessments</h2>
+            <p>The platform allows users to test their coding skills by solving programming questions using a real-time code editor equipped with syntax highlighting, error detection, and support for multiple programming languages. They can run test cases to validate their solutions and receive performance metrics, such as execution time and code efficiency, for self-improvement..</p>
+        </section>
+        <section id="Templates" class="container">
+            <h2>Template Creation</h2>
+            <p>For events or creative projects, users can design custom templates by incorporating photos, text, and styling.The template creation tool allows users to design event-related templates using a user-friendly drag-and-drop interface.The tool supports adding photos, text, and styling elements, and users can download their creations.</p>
+        </section>
+        <section id="Learn" class="container">
+            <h2>Learning Through Videos</h2>
+            <p>.The "Learn" section features a comprehensive library of video tutorials covering programming languages like Java, C, Python, and more. The content ranges from beginner-friendly introductions to advanced techniques and real-world project examples. Users can bookmark videos, track their learning progress.</p>
+        </section>
+    -->
+        <section id="about" class="container">
+            <h2>About Us</h2>
+            <p>The Technical Club is dedicated to fostering innovation and technical skills through workshops, projects, and events. Our mission is to create a supportive community for tech enthusiasts to learn, collaborate, and grow. By providing hands-on experiences and mentorship opportunities, we empower members to develop real-world skills. Join us to connect with like-minded individuals and make a lasting impact in the ever-evolving world of technology.</p>
+        </section>
+
+        <section id="contact" class="container">
+            <h2> Contact Us</h2>
+            <p>We’d love to hear from you! Whether you have a question about our books, your order, or anything else, our team is ready to answer all your questions.</p> 
+            <li><strong>Email:</strong>sangamsunkanur58@gmail.com,raghavendrarathod516@gmail.com</li>
+            <li><strong>phone:</strong>+(91)8088128128,+(91)6362782254</li>
+            <li><strong>address:</strong>Gnana Gangothri Campus,BITM, Ballari-583104</li>
+        </section>
+    </main>
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Technical Club. All rights reserved.</p>
+        </div>
+    </footer>
+    <script src="clientscript.js"></script>
+</body>
+</html>
+

@@ -1,0 +1,39 @@
+[
+  {
+    "id": 1,
+    "question": "Check if a number is even or odd.",
+    "details": {
+      "difficulty": "Easy",
+      "hints": ["Use modulus operator.", "Check remainder when divided by 2."]
+    },
+    "testCases": [
+      { "input": "2\n", "expected": "Even" },
+      { "input": "3\n", "expected": "Odd" }
+    ]
+  },
+  {
+    "id": 2,
+    "question": "Calculate the factorial of a number.",
+    "details": {
+      "difficulty": "Medium",
+      "hints": ["Factorial of 0 is 1.", "Use recursion or loops."]
+    },
+    "testCases": [
+      { "input": "5\n", "expected": "120" },
+      { "input": "0\n", "expected": "1" }
+    ]
+  },
+   {
+    "id": 3,
+    "question": "Write a program to reverse a string.",
+    "details": {
+      "difficulty": "Easy",
+      "hints": ["Use string slicing.", "Iterate backward."],
+    },
+    "testCases":
+     [
+      { "input": "hello\n", expected: "olleh" },
+      { "input": "world\n", expected: "dlrow" },
+     ]
+  }
+]

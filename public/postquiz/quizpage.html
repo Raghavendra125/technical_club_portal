@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Take Quizzes</title>
+
+    <link rel="stylesheet" href="quizpage.css">
+    <style>
+        /* Reset and base styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Roboto', Arial, sans-serif;
+            background: linear-gradient(135deg, #99c5e8, #f9fafb);
+            color: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .quiz-container {
+            background: rgba(14, 14, 14, 0.1);
+            border-radius: 12px;
+            padding: 30px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+            width: 100%;
+            max-width: 600px;
+            text-align: center;
+            position: relative;
+            backdrop-filter: blur(10px);
+        }
+
+        .back-arrow {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            background: transparent;
+            border: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+            color: #fff;
+            transition: transform 0.3s ease, color 0.3s ease;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        .back-arrow:hover {
+            color: #ffcc00;
+            transform: scale(1.1);
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+            color: #ffcc00;
+        }
+
+        p {
+            font-size: 1.2rem;
+            color: #ddd;
+            margin-bottom: 20px;
+        }
+
+        .quiz-topic {
+            margin: 15px 0;
+            font-size: 1.1rem;
+        }
+
+        .quiz-topic input[type="radio"] {
+            margin-right: 10px;
+        }
+
+        label {
+            cursor: pointer;
+            color: #fff;
+            transition: color 0.3s ease, transform 0.3s ease;
+        }
+
+        label:hover {
+            color: #ffcc00;
+            transform: scale(1.05);
+        }
+
+        .start-quiz-btn {
+            background: #ffcc00;
+            color: #333;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1.1rem;
+            transition: background 0.3s ease, transform 0.3s ease;
+            margin-top: 20px;
+        }
+
+        .start-quiz-btn:disabled {
+            background: #555;
+            cursor: not-allowed;
+        }
+
+        .start-quiz-btn:hover:enabled {
+            background: #ffaa00;
+            transform: translateY(-2px);
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2rem;
+            }
+
+            p {
+                font-size: 1rem;
+            }
+
+            .start-quiz-btn {
+                font-size: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="quiz-container">
+        <!--
+        <button class="back-arrow" onclick="window.history.back()" aria-label="Go back">
+            &#8592; Back
+        </button>-->
+        <h1>Take Quizzes</h1>
+        <p>Test your knowledge and improve your skills</p>
+        <div class="quiz-topic">
+            <input type="radio" id="basic-aptitude" name="quiz" value="basic-aptitude1.html">
+            <label for="basic-aptitude">Basic Aptitude</label>
+        </div>
+        <div class="quiz-topic">
+            <input type="radio" id="advanced-aptitude" name="quiz" value="advanced-aptitude2.html">
+            <label for="advanced-aptitude">Advanced Aptitude</label>
+        </div>
+        <div class="quiz-topic">
+            <input type="radio" id="coding" name="quiz" value="coding3.html">
+            <label for="coding">Coding</label>
+        </div>
+        <div class="quiz-topic">
+            <input type="radio" id="critical-thinking" name="quiz" value="critical-thinking4.html">
+            <label for="critical-thinking">Critical Thinking</label>
+        </div>
+        <button class="start-quiz-btn" id="start-quiz-btn" disabled>Start Quiz</button>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const startQuizBtn = document.getElementById('start-quiz-btn');
+            const quizTopics = document.querySelectorAll('input[name="quiz"]');
+
+            startQuizBtn.addEventListener('click', () => {
+                const selectedQuiz = document.querySelector('input[name="quiz"]:checked');
+                if (selectedQuiz) {
+                    window.location.href = selectedQuiz.value;
+                } else {
+                    alert('Please select a quiz topic.');
+                }
+            });
+
+            quizTopics.forEach(topic => {
+                topic.addEventListener('change', () => {
+                    startQuizBtn.disabled = ![...quizTopics].some(input => input.checked);
+                });
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Quiz Leaderboard</title>
+    <!--
+    <link rel="stylesheet" href="../postquiz/kzkzstyles.css">-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        .leaderboard-container {
+            max-width: 1000px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+
+        .leaderboard-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .leaderboard-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        .leaderboard-table th,
+        .leaderboard-table td {
+            padding: 12px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .leaderboard-table th {
+            background-color: #f8f9fa;
+            font-weight: 600;
+        }
+
+        .rank-1 { background-color: #ffd70033; }
+        .rank-2 { background-color: #c0c0c033; }
+        .rank-3 { background-color: #cd7f3233; }
+    </style>
+</head>
+<body>
+    <div class="leaderboard-container">
+        <div class="leaderboard-header">
+            <h1><i class="fas fa-trophy"></i> Quiz Leaderboard</h1>
+            <button class="button" onclick="window.location.href='admin_home_page.html'">
+                <i class="fas fa-home"></i> Home
+            </button>
+        </div>
+
+        <table class="leaderboard-table">
+            <thead>
+                <tr>
+                    <th>Rank</th>
+                    <th>Name</th>
+                    <th>USN</th>
+                    <th>Score</th>
+                    <th>Accuracy</th>
+                    <th>Questions Attempted</th>
+                    <th>Date</th>
+                </tr>
+            </thead>
+            <tbody id="leaderboard-body">
+                <!-- Data will be populated by JavaScript -->
+            </tbody>
+        </table>
+    </div>
+    <script src="leaderboard.js"></script>
+</body>
+</html>

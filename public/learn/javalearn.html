@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learning Platform</title>
+    <link rel="stylesheet" href="learnstyles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="header-container">
+                <a href="../user_home_page.html" class="home-button">
+                    <i class="fas fa-home"></i>
+                    <span>Home</span>
+                </a>
+                <div class="search-container">
+                    <input type="text" id="searchInput" placeholder="Search videos...">
+                    <button id="searchButton">
+                        <i class="fas fa-search"></i>
+                    </button>
+                </div>
+            </div>
+            <!--
+            <div class="search-container">
+                <input type="text" id="searchInput" placeholder="Search videos...">
+                <button id="searchButton">
+                    <i class="fas fa-search"></i>
+                </button>
+            </div>
+          -->
+        </header>
+
+        <main>
+            <div class="video-container">
+                <div class="main-video">
+                    <div class="video-wrapper">
+                        <iframe id="currentVideo" 
+                                src="" 
+                                frameborder="0" 
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                                allowfullscreen>
+                        </iframe>
+                    </div>
+                    <div class="video-controls">
+                        <button id="prevVideo">
+                            <i class="fas fa-step-backward"></i>
+                        </button>
+                        <button id="playPause">
+                            <i class="fas fa-play"></i>
+                        </button>
+                        <button id="nextVideo">
+                            <i class="fas fa-step-forward"></i>
+                        </button>
+                        <button id="toggleSize">
+                            <i class="fas fa-expand"></i>
+                        </button>
+                    </div>
+                    <div class="video-info">
+                        <h2 id="videoTitle">Video Title</h2>
+                        <p id="videoDescription">Video description goes here.</p>
+                    </div>
+                </div>
+                <div class="playlist-container">
+                    <h3>Video Playlist</h3>
+                    <div class="playlist" id="videoPlaylist">
+                        <!-- Playlist items will be populated by JavaScript -->
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+    <script src="javalearnscript.js"></script>
+</body>
+</html>

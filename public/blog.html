@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Technical Club Portal - Empowering Future Technologists</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: #f4f4f9;
+            line-height: 1.6;
+        }
+
+        .header {
+            text-align: center;
+            padding: 60px 20px;
+            background: linear-gradient(135deg, #2c3e50, #3498db);
+            color: white;
+            animation: fadeIn 2s ease-in-out;
+        }
+
+        .header h1 {
+            font-size: 2.5em;
+            margin-bottom: 15px;
+        }
+
+        .header p {
+            font-size: 1.2em;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(-20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        main {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .section {
+            margin: 40px 0;
+            background: white;
+            border-radius: 12px;
+            padding: 30px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .section h2 {
+            color: #2c3e50;
+            border-bottom: 3px solid #3498db;
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+        }
+
+        .event-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+            margin-top: 30px;
+        }
+
+        .event-card {
+            background: #fff;
+            border-radius: 10px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+            overflow: hidden;
+        }
+
+        .event-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .event-image {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .event-content {
+            padding: 20px;
+        }
+
+        .event-content h3 {
+            color: #2c3e50;
+            margin-top: 0;
+        }
+
+        .event-content p {
+            color: #666;
+            margin-bottom: 15px;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 8px 20px;
+            background: #3498db;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background 0.3s ease;
+        }
+
+        .btn:hover {
+            background: #2980b9;
+        }
+
+        .insights {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-top: 30px;
+        }
+
+        .insight-card {
+            background: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .footer {
+            background: #2c3e50;
+            color: white;
+            padding: 40px 20px;
+            margin-top: 50px;
+            text-align: center;
+        }
+
+        .social-media {
+            margin-top: 20px;
+        }
+
+        .social-media a {
+            color: white;
+            margin: 0 15px;
+            font-size: 24px;
+            transition: color 0.3s ease;
+        }
+
+        .social-media a:hover {
+            color: #3498db;
+        }
+
+        .contact-info {
+            margin-top: 20px;
+            font-size: 0.9em;
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <h1>Technical Club Portal</h1>
+        <p>Empowering students through technology, innovation, and collaborative learning</p>
+    </header>
+
+    <main>
+        <section class="section">
+            <h2>About Our Technical Club</h2>
+            <img src="images/tech_club.jpg" alt="Technical Club Team" style="width: 80%; border-radius: 10px; margin-bottom: 5px;">
+            <p>The Technical Club Portal is a dynamic platform designed to nurture technical talent and foster innovation among students. Established in 2023, we've successfully conducted over 50 events and workshops, benefiting more than 1000 students across various technical domains.</p>
+        </section>
+
+        <section class="section">
+            <h2>Featured Events & Activities</h2>
+            <div class="event-grid">
+                <div class="event-card">
+                    <img src="images/tech_qz_img.jpg" alt="Technical Quiz Event" class="event-image">
+                    <div class="event-content">
+                        <h3>Technical Quizzes</h3>
+                        <p>Weekly quizzes covering programming, data structures, algorithms, and emerging technologies. Participate to win certificates and prizes!</p>
+                        <a href="#" class="btn">Join Next Quiz</a>
+                    </div>
+                </div>
+
+                <div class="event-card">
+                    <img src="images/tech_cd_img.jpg" alt="Coding Assessment" class="event-image">
+                    <div class="event-content">
+                        <h3>Coding Assessments</h3>
+                        <p>Regular coding challenges designed to improve problem-solving skills. Practice with real interview questions from top tech companies.</p>
+                        <a href="#" class="btn">Start Coding</a>
+                    </div>
+                </div>
+
+                <div class="event-card">
+                    <img src="images/tech_ws_img.jpg" alt="Workshop Session" class="event-image">
+                    <div class="event-content">
+                        <h3>Workshops</h3>
+                        <p>Hands-on workshops on web development, mobile app development, AI/ML, and cloud computing. Learn from industry experts!</p>
+                        <a href="#" class="btn">View Schedule</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2>Learning Resources</h2>
+            <div class="event-grid">
+                <div class="event-card">
+                    <img src="images/tech_vd_img.jpg" alt="Video Tutorials" class="event-image">
+                    <div class="event-content">
+                        <h3>Video Tutorials</h3>
+                        <p>Access our curated collection of video tutorials on programming languages, frameworks, and tools.</p>
+                        <a href="#" class="btn">Browse Videos</a>
+                    </div>
+                </div>
+
+                <div class="event-card">
+                    <img src="images/tech_pj_img.jpg" alt="Project Templates" class="event-image">
+                    <div class="event-content">
+                        <h3>Project Templates</h3>
+                        <p>Download ready-to-use templates for web applications, mobile apps, and documentation.</p>
+                        <a href="#" class="btn">Get Templates</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2>Industry Insights & Success Stories</h2>
+            <div class="insights">
+                <div class="insight-card">
+                    <h3>Tech Careers</h3>
+                    <p>Learn about the most in-demand tech roles and skills required for 2025.</p>
+                    <a href="https://www.techcareerinsights.com" class="btn">Read More</a>
+                </div>
+                
+                <div class="insight-card">
+                    <h3>Student Success</h3>
+                    <p>Read how our members secured positions at top tech companies.</p>
+                    <a href="https://www.studentachievements.edu" class="btn">Read More</a>
+                </div>
+
+                <div class="insight-card">
+                    <h3>Industry Trends</h3>
+                    <p>Stay updated with the latest technology trends and innovations.</p>
+                    <a href="https://www.techtrends.com" class="btn">Read More</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="social-media">
+            <a href="#"><i class="fab fa-github"></i></a>
+            <a href="#"><i class="fab fa-linkedin"></i></a>
+            <a href="#"><i class="fab fa-discord"></i></a>
+        </div>
+        <div class="contact-info">
+            <p>Email: contact@technicalclub.edu</p>
+            <p>Location: Technology Building, University Campus</p>
+            <p>&copy; 2025 Technical Club Portal. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>

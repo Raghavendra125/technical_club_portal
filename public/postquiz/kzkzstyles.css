@@ -1,0 +1,247 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap');
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background: #b9b3a9;
+  display: flex;
+  justify-content: center;
+  min-height: 100vh;
+  margin: 0;
+  padding: 20px;
+}
+
+.container {
+  width: 800px;
+  padding: 30px;
+  margin: 20px;
+  background-color: #fff;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 20px;
+  position: relative;
+}
+
+.quiz-header {
+  margin-bottom: 30px;
+}
+
+.quiz-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: #f8f9fa;
+  border-radius: 10px;
+}
+
+.timer {
+  font-size: 1.2em;
+  color: #dc3545;
+  font-weight: bold;
+}
+
+.timer.warning {
+  animation: pulse 1s infinite;
+}
+
+@keyframes pulse {
+  0% { opacity: 1; }
+  50% { opacity: 0.5; }
+  100% { opacity: 1; }
+}
+
+.progress {
+  font-size: 1.1em;
+  color: #666;
+}
+
+.question {
+  font-size: 1.1em;
+  font-weight: 500;
+  margin-bottom: 20px;
+  padding: 15px;
+  background-color: #f8f9fa;
+  border-radius: 10px;
+}
+
+.options {
+  display: grid;
+  gap: 12px;
+}
+
+.option {
+  display: flex;
+  align-items: center;
+  padding: 12px 15px;
+  background-color: #fff;
+  border: 2px solid #dee2e6;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.option:hover {
+  border-color: #007bff;
+  background-color: #f8f9fa;
+}
+
+.option input[type="radio"] {
+  margin-right: 10px;
+}
+
+.navigation-buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 30px;
+}
+
+.button {
+  padding: 12px 24px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1em;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.button:hover {
+  background-color: #0056b3;
+  transform: translateY(-1px);
+}
+
+.button.disabled {
+  background-color: #6c757d;
+  cursor: not-allowed;
+}
+
+.question-palette {
+  margin-top: 30px;
+  padding: 20px;
+  background-color: #f8f9fa;
+  border-radius: 10px;
+}
+
+.question-buttons {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(40px, 1fr));
+  gap: 8px;
+  margin-top: 10px;
+}
+
+.question-button {
+  width: 40px;
+  height: 40px;
+  border: none;
+  border-radius: 50%;
+  background-color: #dee2e6;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.question-button.attempted {
+  background-color: #28a745;
+  color: white;
+}
+
+.question-button.current {
+  border: 2px solid #007bff;
+}
+
+.result {
+  padding: 20px;
+  background-color: #f8f9fa;
+  border-radius: 10px;
+  margin-top: 20px;
+}
+
+.result-summary {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.result-item {
+  padding: 15px;
+  background-color: #fff;
+  border-radius: 8px;
+  text-align: center;
+}
+
+/* ... Keep all existing styles ... */
+
+/* Update the quiz-controls styling 
+#quiz-controls {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 20px;
+}*/
+#quiz-controls {
+    display: none;  /* Hidden by default */
+    justify-content: center;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+/* Add specific styling for the control buttons */
+#quiz-controls .button {
+    min-width: 120px;
+    justify-content: center;
+    font-size: 0.95em;
+}
+
+/* Update the general button styling */
+.button {
+    padding: 12px 24px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1em;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.button:hover {
+    background-color: #0056b3;
+    transform: translateY(-1px);
+}
+
+/* Style for different button types */
+#retry {
+    background-color: #28a745;
+}
+
+#retry:hover {
+    background-color: #218838;
+}
+
+#showAnswer {
+    background-color: #17a2b8;
+}
+
+#showAnswer:hover {
+    background-color: #138496;
+}
+
+#home {
+    background-color: #6c757d;
+}
+
+#home:hover {
+    background-color: #5a6268;
+}
+
+/* Keep the hide class */
+.hide {
+    display: none;
+}
